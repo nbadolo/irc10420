@@ -67,7 +67,7 @@ X*=pix2mas
 Y*=pix2mas
 #%%
 """
-Filtre utilisé: I_PRIM 
+Filtre utilisé: I_PRIM
 """
 #%%
 for i in range(nFrames):
