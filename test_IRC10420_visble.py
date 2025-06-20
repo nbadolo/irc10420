@@ -101,7 +101,7 @@ for i in range (nFrames):
        plt.colorbar(label='ADU in log$_{10}$ scale')       
        q = plt.quiver(X[::X_step,::X_step],Y[::X_step,::X_step],U[::X_step,::X_step], V[::X_step,::X_step])
        plt.quiverkey(q, X = 0.12, Y = 1.03, U = 0.03, label='pol. degree vector norm scale 0.03 ', labelpos='E')
-       plt.text(-1.1*pix2mas*size[0]//6, 2*pix2mas*size[1]//6, im_name_lst[3], color='w',
+       plt.text(size[0]//10, 2*pix2mas*size[1]//6., im_name_lst[3], color='w',
           fontsize='large', ha='center')
     else:
         plt.imshow(np.log10(sub_v_arr[i]), cmap='inferno', origin='lower',
@@ -110,7 +110,7 @@ for i in range (nFrames):
             plt.colorbar(label = 'ADU in log$_{10}$ scale')
         else:
             plt.colorbar(label='') 
-        plt.text(-1.5*pix2mas*size[0]//6, 2*pix2mas*size[1]//6, im_name_lst[i], color='w',
+        plt.text(size[0]//10, 2*pix2mas*size[1]//6., im_name_lst[i], color='w',
              fontsize='large', ha='center')
     #plt.colorbar(label='ADU in log$_{10}$ scale')
     plt.clim(Vmin[i],Vmax[i])

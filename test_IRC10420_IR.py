@@ -7,7 +7,7 @@ Created on Mon Jan  3 16:27:40 2022
 """
 
 """
-Code simplifié 
+Code simplifié de l'étoile IRC+10420'
 """
 import numpy as np
 from astropy.io import fits

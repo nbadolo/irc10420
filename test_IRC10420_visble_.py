@@ -11,6 +11,7 @@ Code simplifié
 """
 
 import numpy as np
+import scipy
 from astropy.io import fits
 from scipy import optimize
 from astropy.nddata import Cutout2D
@@ -139,6 +140,7 @@ for i in range (nFrames+2):
        plt.quiverkey(q, X = -0.05, Y = 1.03, U = 0.03, label='pol. degree vector norm scale 0.03 ', labelpos='E')
        plt.text(-17*size[0]//25., 3*size[1]//2, im_name_lst[3], color='cyan',
                 fontsize='x-small', ha='center')
+       
     else:
         if i == 4:
             plt.imshow(np.log10(sub_v_arr_[1]), cmap='inferno', origin='lower',
@@ -254,6 +256,7 @@ for i in range (nFrames+2):
                 plt.quiverkey(q_, X = -0.05, Y = 1.03, U = 0.1, label='pol. degree vector norm scale 0.1 ', labelpos='E')
                 plt.text(-17*size_[0]//25., 3*size_[1]//2, im_name_lst[5], color='cyan',
                          fontsize='x-small', ha='center')
+
             else:
                 plt.imshow(np.log10(sub_v_arr[i]), cmap='inferno', origin='lower',
                            vmin=Vmin[i], vmax=Vmax[i], extent = [x_min , x_max, y_min , y_max])
